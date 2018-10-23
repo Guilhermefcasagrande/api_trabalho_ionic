@@ -13,7 +13,7 @@
 
             try{
                 $this->conn = new PDO("mysql:host=" . $this->host . ";dbname=" . $this->dbName, $this->user, $this->senha);
-                $this->conn->exec();
+                $this->conn->exec("set names utf8");
             }catch(PDOException $ex){
                 echo "Erro na conexão: ".$exception->getMessage();
             }
